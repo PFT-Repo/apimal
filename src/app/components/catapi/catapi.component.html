@@ -1,0 +1,9 @@
+<p>catapi works!</p>
+<div *ngIf="images.length>0"></div>
+<ul>
+    <div *ngFor="let image of images">
+        <li>
+            <app-catapi-card src="${{image}}"></app-catapi-card>
+        </li>
+    </div>
+</ul>
