@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainpipePipe } from './pipes/mainpipe.pipe';
+import { ComponentsModule } from './components/components.module';
+import { DogComponentComponent } from './components/dog-component/dog-component.component';
 
 @NgModule({
   declarations: [
@@ -12,9 +15,13 @@ import { MainpipePipe } from './pipes/mainpipe.pipe';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    AppRoutingModule,
+    ComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+}
