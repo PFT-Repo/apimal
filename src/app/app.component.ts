@@ -1,6 +1,8 @@
 //app.component.ts
 import {Component, OnInit} from '@angular/core'; // Importing OnInit hook
 import {HttpClient, HttpHeaders} from '@angular/common/http';
+import { environment } from 'environments/environment';
+
 @Component({
 	selector: 'app-root',
 	templateUrl: './app.component.html',
@@ -14,7 +16,7 @@ export class AppComponent implements OnInit {
 		// API Call
 		let headers = new HttpHeaders({
 			'x-rapidapi-host': 'timetable-lookup.p.rapidapi.com',
-			'x-rapidapi-key': '0ebd8465a2msh94ef88d2835aa67p199e19jsn92b7217f5883'
+			'x-rapidapi-key': environment.Rapidkey
 		});
 		this.http
 			.get<any>('https://timetable-lookup.p.rapidapi.com/codes/entertainment/', {
